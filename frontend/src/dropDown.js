@@ -23,6 +23,7 @@ const collegeOptions = [
     const selectedValue = event.target.value;
     const selectedLabel = collegeOptions.find(option => option.value === selectedValue).label;
     setSelectedOption({ value: selectedValue, label: selectedLabel });
+    nav("/login");
   };
 
   return (
@@ -38,8 +39,8 @@ const collegeOptions = [
         ))}
       </select>
       {/* {selectedValue && <p>Selected value: {selectedValue} </p> } */}
-      <p>Selected Value: {selectedOption.value}</p>
-      <p>Selected Label: {selectedOption.label}</p>
+      {/* <p>Selected Value: {selectedOption.value}</p>
+      <p>Selected Label: {selectedOption.label}</p> */}
 
     </div>
     </>
