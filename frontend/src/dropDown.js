@@ -20,9 +20,11 @@ const collegeOptions = [
   ];
   
   const handleDropdownChange = (event) => {
-    const selectedValue = event.target.value;
+    setSelectedValue(event.target.value);
     const selectedLabel = collegeOptions.find(option => option.value === selectedValue).label;
     setSelectedOption({ value: selectedValue, label: selectedLabel });
+    sessionStorage.value=selectedValue;
+    sessionStorage.label=selectedOption;
   };
 
   return (
