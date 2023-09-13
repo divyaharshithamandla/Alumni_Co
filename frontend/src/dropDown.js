@@ -7,11 +7,17 @@ const Dropdown = () => {
   const [selectedValue, setSelectedValue] = useState('');
 const [selectedOption, setSelectedOption] = useState([0]);
   
-  const collegeOptions = [
-    { label: 'Harvard University', value: 'harvard' },
-    { label: 'Stanford University', value: 'stanford' },
+const collegeOptions = [
+    { label: 'Jntugv', value: 'c-123' },
+    { label: 'Jntuk', value: 'c-456' },
+    { label: 'Jntuh', value: 'c-789' },
+    { label: 'JntuA', value: 'n-8797' },
+    { label: 'Andhra University', value: 'c-1123' },
+    { label: 'IIIT-Chennai', value: 'b-12345' },
+    { label: 'IIIT-Nuzividu', value: 'b-6337' },
+    { label: 'GVP', value: 'n-172521' },
+    
   ];
-
   
   const handleDropdownChange = (event) => {
     const selectedValue = event.target.value;
