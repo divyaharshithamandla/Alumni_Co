@@ -30,7 +30,7 @@ export const Home = () => {
           <NavLink to="/college">College</NavLink>
         </li>
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/drop">Login</NavLink>
         </li>
         <li>
           <NavLink to="/about">About</NavLink>

@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'; // Proper import for the CSS file
@@ -29,7 +40,7 @@ const slideImages = [
     caption: 'Slide 2',
   },
   {
-    url: 'al.jpg',
+    url: 'al3.jpg',
     caption: 'Slide 3',
   },
 ];
