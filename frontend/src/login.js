@@ -16,7 +16,7 @@ export const Login=()=>
     const [password,setpassword]=useState([]);
     const [regno,setregno]=useState([]);
 
-    const Show=async()=>{
+    const Save=async()=>{
      
         const res=await axios.get("http://localhost:8000/output/"+email+"/"+password)
         {
@@ -32,44 +32,6 @@ export const Login=()=>
         }
     
     }
-   
-    // const Submit=async()=>
-    // {
-    //     try
-    //     {
-    //         const res=await axios.get("http://localhost:8000/output/"+email+"/"+password)
-    //         {
-    //             if(res.data)
-    //             {
-    //                 nav('/show');
-    //             }
-    //             else
-    //             {
-    //                 const res=await axios.get("http://localhost:8000/output/"+email)
-    //                 {
-    //                     if(res.data)
-    //                     {
-    //                         nav('/admin');
-    //                     }
-    //                     else{
-    //                         alert('inappropriate trial')
-    //                     }
-    //                 }
-
-    //             }
-    //         }
-    //     }
-    //     catch(e)
-    //     {
-    //         console.log(e)
-    //     }
-    // }
-    // const Forgot=()=>{
-    //     nav('/forgot');
-    // }
-    // const Nav=()=>{
-    //     nav('/');
-    // }
     
     return(
     <>
@@ -91,7 +53,7 @@ export const Login=()=>
                     <input type ="regno" name="txt" placeholder="Regno" required=""/>
                     <input type ="email" name="txt" placeholder="Email" required=""/>
                             <input type ="password" name="txt" placeholder="Password" required=""/>
-                            <button>login</button>
+                            <button onClick={Login}>login</button>
                     </form>
                     
          </div>
@@ -113,7 +75,7 @@ export const Login=()=>
                     <input type ="regno" name="txt" placeholder="Regno" required=""/>
                     <input type ="email" name="txt" placeholder="Email" required=""/>
                             <input type ="password" name="txt" placeholder="Password" required=""/>
-                            <button>login</button>
+                            <button  onClick={Login}>login</button>
                     </form>
                     
          </div>
@@ -136,7 +98,7 @@ export const Login=()=>
                     <input type ="regno" name="txt" placeholder="Regno" required=""/>
                     <input type ="email" name="txt" placeholder="Email" required=""/>
                             <input type ="password" name="txt" placeholder="Password" required=""/>
-                            <button>login</button>
+                            <button  onClick={Save}>login</button>
                     </form>
                     
          </div>
