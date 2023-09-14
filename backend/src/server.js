@@ -15,8 +15,8 @@ app.get('/mail/:buttonId',async(req,res)=>{
 app.get('/mail1s',async(req,res)=>{
     const details=await db.collection("srkr").find({}).toArray()
     res.send(details);
-});
-app.get('/find/',async(req,res)=>{
+});    
+app.get('/find/:gmail/:value',async(req,res)=>{
     const details=await db.collection("srkr").findOne({Gmail:"divyaharshitha7704@gmail.com"})
     res.send(details);
 });
