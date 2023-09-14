@@ -1,0 +1,30 @@
+button{
+    height:10%;
+    width:15%;
+    
+}
+
+div{
+    
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+textarea {
+    width: 100%; /* Set the width to 100% of its container */
+    max-width: 400px; /* Limit the maximum width */
+    height: 150%; /* Set the initial height */
+    padding: 20%; /* Add padding inside the textarea */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set the font size */
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; 
+  }
+  
+  /* Apply additional styles on focus */
+  textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+  }
+  

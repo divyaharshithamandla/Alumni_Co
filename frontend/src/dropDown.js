@@ -26,6 +26,10 @@ const collegeOptions = [
     sessionStorage.value=selectedValue;
     sessionStorage.label=selectedOption;
     nav("/login");
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec28f8a649482906a88e8de184fac2809fca08e1
   };
 
   return (
