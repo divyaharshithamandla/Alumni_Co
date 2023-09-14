@@ -16,6 +16,18 @@ app.get('/mail1s/:value',async(req,res)=>{
     const details=await db.collection(req.params.value).find({}).toArray()
     res.send(details);
 });
+app.get('/find/:gmail/:value',async(req,res)=>{
+    const details=await db.collection(req.params.value).findOne({Gmail:req.params.gmail})
+    res.send(details);
+});
+app.post('/insert/:name/:text/:user/:gmail',async(req,res)=>{
+    const details=await db.collection('Group').insertOne({Name:req.params.name,Msg:req.params.text,User:req.params.user,Gmail:req.params.gmail})
+    res.send(details);
+});
+app.get('/screen',async(req,res)=>{
+    const details=await db.collection("Group").find({}).toArray()
+    res.send(details);
+});
 connectToDB(()=>{
     app.listen(6000,()=>{
         console.log("Server Running At port 6000");
