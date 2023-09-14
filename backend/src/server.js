@@ -17,7 +17,7 @@ app.get('/mail1s/:value',async(req,res)=>{
     res.send(details);
 });
 app.get('/find/:gmail/:value',async(req,res)=>{
-    const details=await db.collection(req.params.value).findOne({Gmail:req.params.gmail})
+    const details=await db.collection("srkr").findOne({Gmail:req.params.gmail})
     res.send(details);
 });
 app.post('/insert/:name/:text/:user/:gmail',async(req,res)=>{
