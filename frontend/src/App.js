@@ -5,6 +5,7 @@ import { Home } from './home';
 import Dropdown from './dropDown';
 import { Login } from './login';
 import { Ulogin } from './Ulogin';
+import { TextAreaWithButtons } from './notify';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/drop" element={< Dropdown />}/>
             <Route path="/login" element={< Login />}/>
             <Route path="/uloginRend" element={<Ulogin/>}/>
+            <Route path="/note" element={< TextAreaWithButtons />}/>
             {/* <Route path="/slide" element={< Slideshow />}/>
            <Route path="/login" element={<Login/>}></Route> */}
           </Routes>
