@@ -4,11 +4,6 @@ import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter, Routes } f
 import { NavLink,useNavigate} from 'react-router-dom';
 import { Slideshow } from "./slider";
 import './home.css'
-
-
-
-
-
 export const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -27,7 +22,7 @@ export const Home = () => {
       </div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <NavLink to="/college">College</NavLink>
+          <NavLink to="/uloginRend">College</NavLink>
         </li>
         <li>
           <NavLink to="/drop">Login</NavLink>

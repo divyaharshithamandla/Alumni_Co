@@ -51,7 +51,7 @@ export const Ulogin=()=>
                 
                     <form>
                     <label for="chk" aria-hidden="true">Login</label>
-                    <input type ="regno" name="txt" placeholder="Regno" required=""/>
+                    <input type ="regno" name="txt" placeholder="Regno" required="" />
                     <input type ="email" name="txt" placeholder="Email" required=""/>
                             <input type ="password" name="txt" placeholder="Password" required=""/>
                             <button>login</button>
