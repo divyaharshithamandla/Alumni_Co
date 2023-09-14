@@ -8,17 +8,13 @@ import './login.css'
 
 export const Login=()=>
 {   const nav=useNavigate();
-    const [dis,setdis]=useState([]);
-    const [name,setname]=useState([]);
     const [email,setgmail]=useState([]);
-    const [mail,setmail]=useState([]);
-    const [auto,setauto]=useState([]);
     const [password,setpassword]=useState([]);
     const [regno,setregno]=useState([]);
-
+    localStorage.gmail=email;
     const Save=async()=>{
      
-        const res=await axios.get("http://localhost:8000/output/"+email+"/"+password)
+        const res=await axios.get("http://localhost:8000/output/"+email+"/"+password+"/"+regno)
         {
              if(res.data)
              {
@@ -49,9 +45,9 @@ export const Login=()=>
                 
                     <form>
                     <label for="chk" aria-hidden="true">Login</label>
-                    <input type ="regno" name="txt" placeholder="Regno" required=""/>
-                    <input type ="email" name="txt" placeholder="Email" required=""/>
-                            <input type ="password" name="txt" placeholder="Password" required=""/>
+                    <input type ="regno" name="txt" placeholder="Regno" onChange={(e)=>setregno(e.target.value)} required=""/>
+                    <input type ="email" name="txt" placeholder="Email" onChange={(e)=>setgmail(e.target.value)} required=""/>
+                            <input type ="password" name="txt" placeholder="Password" onChange={(e)=>setpassword(e.target.value)} required=""/>
                             <button onClick={Login}>login</button>
                     </form>
                     
@@ -71,9 +67,9 @@ export const Login=()=>
                 
                     <form>
                     <label for="chk1" aria-hidden="true">Login</label>
-                    <input type ="regno" name="txt" placeholder="Regno" required=""/>
-                    <input type ="email" name="txt" placeholder="Email" required=""/>
-                            <input type ="password" name="txt" placeholder="Password" required=""/>
+                    <input type ="regno" name="txt" placeholder="Regno" onChange={(e)=>setregno(e.target.value)} required=""/>
+                    <input type ="email" name="txt" placeholder="Email" onChange={(e)=>setgmail(e.target.value)}  required=""/>
+                            <input type ="password" name="txt" placeholder="Password" onChange={(e)=>setpassword(e.target.value)}  required=""/>
                             <button  onClick={Login}>login</button>
                     </form>
                     
@@ -94,9 +90,9 @@ export const Login=()=>
                     <form>
                     <label for="chk2" aria-hidden="true">Login</label>
                         
-                    <input type ="regno" name="txt" placeholder="Regno" required=""/>
-                    <input type ="email" name="txt" placeholder="Email" required=""/>
-                            <input type ="password" name="txt" placeholder="Password" required=""/>
+                    <input type ="regno" name="txt" placeholder="Regno" onChange={(e)=>setregno(e.target.value)} required=""/>
+                    <input type ="email" name="txt" placeholder="Email"  onChange={(e)=>setgmail(e.target.value)} required=""/>
+                            <input type ="password" name="txt" placeholder="Password" onChange={(e)=>setpassword(e.target.value)} required=""/>
                             <button  onClick={Save}>login</button>
                     </form>
                     

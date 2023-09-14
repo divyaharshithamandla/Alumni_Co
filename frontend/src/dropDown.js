@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 // import './home1.css';
 const Dropdown = () => {
   const nav=useNavigate();
@@ -23,9 +24,8 @@ const collegeOptions = [
     setSelectedValue(event.target.value);
     const selectedLabel = collegeOptions.find(option => option.value === selectedValue).label;
     setSelectedOption({ value: selectedValue, label: selectedLabel });
-    sessionStorage.value=selectedValue;
-    sessionStorage.label=selectedOption;
-    nav("/login");
+    localStorage.value=selectedValue;
+    localStorage.label=selectedOption;
   };
 
   return (

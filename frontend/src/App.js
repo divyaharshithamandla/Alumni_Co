@@ -6,7 +6,7 @@ import Dropdown from './dropDown';
 import { Login } from './login';
 import { Ulogin } from './Ulogin';
 import { TextAreaWithButtons } from './notify';
-
+import { Anav } from './mainstudent';
 function App() {
   return (
     <div className="App">
@@ -18,6 +18,7 @@ function App() {
             <Route path="/login" element={< Login />}/>
             <Route path="/uloginRend" element={<Ulogin/>}/>
             <Route path="/note" element={< TextAreaWithButtons />}/>
+            <Route path="/mainstudent" element={<Anav/>}/>
             {/* <Route path="/slide" element={< Slideshow />}/>
            <Route path="/login" element={<Login/>}></Route> */}
           </Routes>
