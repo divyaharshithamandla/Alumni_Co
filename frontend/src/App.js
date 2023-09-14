@@ -7,6 +7,8 @@ import { Login } from './login';
 import { Ulogin } from './Ulogin';
 import { TextAreaWithButtons } from './notify';
 import { Anav } from './mainstudent';
+import Chat from './chat';
+import Exchat from './Exchat';
 function App() {
   return (
     <div className="App">
@@ -19,6 +21,8 @@ function App() {
             <Route path="/uloginRend" element={<Ulogin/>}/>
             <Route path="/note" element={< TextAreaWithButtons />}/>
             <Route path="/mainstudent" element={<Anav/>}/>
+            <Route path="/chat" element={<Chat/>}/>
+            <Route path="/exchat" element={<Exchat/>}/>
             {/* <Route path="/slide" element={< Slideshow />}/>
            <Route path="/login" element={<Login/>}></Route> */}
           </Routes>

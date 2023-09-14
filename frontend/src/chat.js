@@ -4,26 +4,25 @@ import Avatar from 'react-avatar';
 const Chat=()=>{
     const[text,settext]=useState("");
     const[user,setuser]=useState("");
-    const gmail=localStorage.email;
+    // const gmail=localStorage.email;
     const value=localStorage.value;
     var name="";
     const Send=async()=>{
         try{
-        const res=await axios.get("http://localhost:6000/find/"+gmail+"/"+value)
-        if(res.data)
-        {
-            {
-                <Avatar name={res.data.Fname+" "+res.data.Lname} maxInitials={2}/>
-            }
-            setuser(res.data.User);
-        const res1=await axios.post("http://localhost:6000/insert/"+name+"/"+text+"/"+user+"/"+gmail)
+        // const res=await axios.get("http://localhost:6000/find/")
+        // if(res.data)
+        // {
+        //     // {
+        //     //     <Avatar name={res.data.Fname+" "+res.data.Lname} maxInitials={2}/>
+        //     // }
+        //     setuser(res.data.User);
+        const res1=await axios.post("http://localhost:6000/insert/"+text+"/"+"student"+"/"+"divyaharshitha7704@gmail.com")
         if(res1.data)
         {
             document.getElementById("text").value="";
             window.location.reload(false);
         }
         }
-    }
     catch(e)
     {
         console.log(e);
@@ -46,7 +45,7 @@ const Chat=()=>{
         <div className="screen">
         {
             data.map((item)=>{   
-                    if(item.Email==gmail)
+                    if(item.Email=="divyaharshitha7704@gmail.com")
                 {
                     return(
                         <>

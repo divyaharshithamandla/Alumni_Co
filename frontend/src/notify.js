@@ -12,7 +12,7 @@ export const TextAreaWithButtons=()=>{
   const value=localStorage.value;
   // Function to handle button clicks
   const handleButtonClick = (buttonId) => {
-         axios.get('http://localhost:8000/mail/'+value+buttonId)
+         axios.get('http://localhost:6000/mail/'+buttonId)
          .then((responce)=>{   
              setData(responce.data);
          })
@@ -40,7 +40,7 @@ export const TextAreaWithButtons=()=>{
     console.log(`Button ${buttonId} clicked`);
   };
   const All=()=>{
-    axios.get('http://localhost:8000/mails/'+value)
+    axios.get('http://localhost:6000/mails')
          .then((responce)=>{   
              setData(responce.data);
          })
