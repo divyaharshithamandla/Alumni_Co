@@ -33,43 +33,7 @@ export const Login=()=>
     
     }
    
-    // const Submit=async()=>
-    // {
-    //     try
-    //     {
-    //         const res=await axios.get("http://localhost:8000/output/"+email+"/"+password)
-    //         {
-    //             if(res.data)
-    //             {
-    //                 nav('/show');
-    //             }
-    //             else
-    //             {
-    //                 const res=await axios.get("http://localhost:8000/output/"+email)
-    //                 {
-    //                     if(res.data)
-    //                     {
-    //                         nav('/admin');
-    //                     }
-    //                     else{
-    //                         alert('inappropriate trial')
-    //                     }
-    //                 }
-
-    //             }
-    //         }
-    //     }
-    //     catch(e)
-    //     {
-    //         console.log(e)
-    //     }
-    // }
-    // const Forgot=()=>{
-    //     nav('/forgot');
-    // }
-    // const Nav=()=>{
-    //     nav('/');
-    // }
+    
     
     return(
     <>

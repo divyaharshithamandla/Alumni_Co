@@ -23,11 +23,9 @@ const collegeOptions = [
     setSelectedValue(event.target.value);
     const selectedLabel = collegeOptions.find(option => option.value === selectedValue).label;
     setSelectedOption({ value: selectedValue, label: selectedLabel });
-
-    nav("/login");
-
     sessionStorage.value=selectedValue;
     sessionStorage.label=selectedOption;
+    nav("/login");
 
   };
 
