@@ -11,6 +11,7 @@ const Chat=()=>{
     const Send=async()=>{
         setuser("Teja");
         try{
+<<<<<<< HEAD
         const res=await axios.get("http://localhost:8000/find/")
         if(res.data)
         {
@@ -19,12 +20,26 @@ const Chat=()=>{
             }
             
         const res1=await axios.post("http://localhost:8000/insert/"+text)
+=======
+        // const res=await axios.get("http://localhost:6000/find/")
+        // if(res.data)
+        // {
+        //     // {
+        //     //     <Avatar name={res.data.Fname+" "+res.data.Lname} maxInitials={2}/>
+        //     // }
+        //     setuser(res.data.User);
+        const res1=await axios.post("http://localhost:6000/insert/"+text+"/"+"student"+"/"+"divyaharshitha7704@gmail.com")
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
         if(res1.data)
         {
             document.getElementById("text").value="";
             window.location.reload(false);
         }
+<<<<<<< HEAD
     }}
+=======
+        }
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
     catch(e)
     {
         console.log(e);

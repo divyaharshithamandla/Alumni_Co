@@ -13,8 +13,12 @@ export const TextAreaWithButtons=()=>{
   // const value=localStorage.value;
   // Function to handle button clicks
   const handleButtonClick = (buttonId) => {
+<<<<<<< HEAD
 
          axios.get('http://localhost:8000/mail/'+buttonId)
+=======
+         axios.get('http://localhost:6000/mail/'+buttonId)
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
          .then((responce)=>{   
              setData(responce.data);
              {
@@ -44,7 +48,11 @@ export const TextAreaWithButtons=()=>{
     console.log(`Button ${buttonId} clicked`);
   };
   const All=()=>{
+<<<<<<< HEAD
     axios.get('http://localhost:8000/mails')
+=======
+    axios.get('http://localhost:6000/mails')
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
          .then((responce)=>{   
              setData(responce.data);
              {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Set a background color for the homepage */
 body {
     background-color: lightcyan; /* Replace with your desired background color */
@@ -22,6 +23,11 @@ body {
     font-size: 18px;
   }
   
+=======
+.active{
+    background-color: #1d4ed8;
+}
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
 
 nav {
     display: flex;
@@ -114,7 +120,11 @@ nav .menu span {
     }
 }
 body{
+<<<<<<< HEAD
     /* background-image: url('C:\Users\rohin\OneDrive\Desktop\Hackathon-\frontend\public\bc2.jpg') ; */
+=======
+    background-image: url('C:\Users\Divya\OneDrive\Desktop\Alumni_Co\Alumni_Co\frontend\public\bc2.jpg') ;
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
     background-repeat: no-repeat;
     background-size: cover;
 }

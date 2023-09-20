@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Home } from "./home";
 import { Login } from "./login";
@@ -59,6 +60,35 @@ function App(){
            {/* <Route path="/views" element={<Sprofiles />}/> */}
            {/* <Route path="/views" element={< AProfileview/>}/> */}
            {/* <Route path="/profA" element={< AProfileview/>}/> */}
+=======
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import { Home } from './home';
+import Dropdown from './dropDown';
+import { Login } from './login';
+import { Ulogin } from './Ulogin';
+import { TextAreaWithButtons } from './notify';
+import { Anav } from './mainstudent';
+import Chat from './chat';
+import Exchat from './Exchat';
+function App() {
+  return (
+    <div className="App">
+<div className="App"> 
+        <Router>
+          <Routes>
+            <Route path="/" element={< Home />}/>
+            <Route path="/drop" element={< Dropdown />}/>
+            <Route path="/login" element={< Login />}/>
+            <Route path="/uloginRend" element={<Ulogin/>}/>
+            <Route path="/note" element={< TextAreaWithButtons />}/>
+            <Route path="/mainstudent" element={<Anav/>}/>
+            <Route path="/chat" element={<Chat/>}/>
+            <Route path="/exchat" element={<Exchat/>}/>
+            {/* <Route path="/slide" element={< Slideshow />}/>
+           <Route path="/login" element={<Login/>}></Route> */}
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
           </Routes>
         </Router>
         </div>

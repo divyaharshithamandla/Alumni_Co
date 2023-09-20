@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from 'react';
 // import { Slide } from 'react-slideshow-image';
 // // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -53,6 +54,8 @@
 //       </div>
 //     )
 // }
+=======
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';

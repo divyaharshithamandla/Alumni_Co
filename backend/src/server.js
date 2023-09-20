@@ -8,21 +8,27 @@ app.use(express.json())
 app.get('/',(req,res)=>{
     res.send("server is running successfully!");
 })
-app.get('/mail/:value/:buttonId',async(req,res)=>{
-    const details=await db.collection(req.params.value).find({User:req.params.buttonId}).toArray()
+app.get('/mail/:buttonId',async(req,res)=>{
+    const details=await db.collection("srkr").find({User:req.params.buttonId}).toArray()
     res.send(details);
 });
-app.get('/mail1s/:value',async(req,res)=>{
-    const details=await db.collection(req.params.value).find({}).toArray()
+app.get('/mail1s',async(req,res)=>{
+    const details=await db.collection("srkr").find({}).toArray()
     res.send(details);
+<<<<<<< HEAD
 });
 app.get('/find/:gmail',async(req,res)=>{
     const details=await db.collection("srkr").findOne({Gmail:req.params.gmail})
+=======
+});    
+app.get('/find/:gmail/:value',async(req,res)=>{
+    const details=await db.collection("srkr").findOne({Gmail:"divyaharshitha7704@gmail.com"})
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
     res.send(details);
 });
-app.post('/insert/:name/:text/:user/:gmail',async(req,res)=>{
-    const details=await db.collection('Group').insertOne({Name:req.params.name,Msg:req.params.text,User:req.params.user,Gmail:req.params.gmail})
-    res.send(details);
+app.post('/insert/:text/:"student"/:"divyaharshitha7704@gmail.com"',async(req,res)=>{
+    const details=await db.collection('Group').insertOne({Msg:req.params.text,User:"student",Gmail:"divyaharshitha7704@gmail.com"})
+    res.json(details);
 });
 app.get('/screen',async(req,res)=>{
     const details=await db.collection("Group").find({}).toArray()

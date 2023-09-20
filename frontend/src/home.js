@@ -5,10 +5,19 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter, Routes } from 'react-router-dom';
 import { NavLink,useNavigate} from 'react-router-dom';
 import { Slideshow } from "./slider";
+<<<<<<< HEAD
 import './home.css';
 import Searchbar from "./searchbar";
 import { CgCommunity } from "react-icons/cg";
 import Footer from "./footer";
+=======
+import './home.css'
+
+
+
+
+
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
 export const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const Search=()=>{
@@ -38,10 +47,17 @@ export const Home = () => {
       </div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
+<<<<<<< HEAD
           <NavLink to="/search"><BiSearchAlt2 /></NavLink>
         </li>
         <li>
           <NavLink to="/ulogin">Uni_login</NavLink>
+=======
+          <NavLink to="/college">College</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login">Login</NavLink>
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
         </li>
         <li>
           <div className="login-dropdown" onClick={toggleLoginDropdown}>
