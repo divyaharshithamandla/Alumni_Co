@@ -3,7 +3,7 @@ import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter, Routes } from 'react-router-dom';
 import { NavLink,useNavigate} from 'react-router-dom';
 import { Slideshow } from "./slider";
-import './home.css'
+// import './home.css'
 
 
 

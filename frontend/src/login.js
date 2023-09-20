@@ -3,105 +3,72 @@ import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
 import './login.css'
-// import Dropdown from "./main";
-
-
 export const Login=()=>
-{   const nav=useNavigate();
-    const [email,setgmail]=useState([]);
-    const [password,setpassword]=useState([]);
-    const [regno,setregno]=useState([]);
-    localStorage.gmail=email;
-    const Save=async()=>{
-     
-        const res=await axios.get("http://localhost:8000/output/"+email+"/"+password+"/"+regno)
+{  
+
+    const nav=useNavigate();
+    {
+        const [email, setEmail] = useState("");
+        const [password, setPassword] = useState("");
+        const [regno, setregno] = useState("");
+        const[college,setcollege]=useState("");
+        localStorage.college=college;
+    const Show=async()=>{
+      localStorage.Gmail=email;
+        const res=await axios.get("http://localhost:8000/find/"+email+"/"+regno+"/"+password)
         {
              if(res.data)
              {
-                setgmail(res.data.email);
-                setpassword(res.data.password);
-                
-             }
+              setcollege(res.data.College);
+                // nav('/main')
+                alert("success"); 
+            }
              else{
                 alert("not found");
              }
         }
-    
     }
     return(
     <>
-    <table>
-        <tr>
-        <td>
-    <div className="main">
-            <input type ="checkbox" id="chk" aria-hidden="true"/>
-                <div className="signup">
-                    <form>
-                        <label for="chk" aria-hidden="true">Alumni</label>
-                            <img src="Alumni.jpg" alt="student" />
-                    </form>
-                </div>
-                <div className="login">
-                
-                    <form>
-                    <label for="chk" aria-hidden="true">Login</label>
-                    <input type ="regno" name="txt" placeholder="Regno" onChange={(e)=>setregno(e.target.value)} required=""/>
-                    <input type ="email" name="txt" placeholder="Email" onChange={(e)=>setgmail(e.target.value)} required=""/>
-                            <input type ="password" name="txt" placeholder="Password" onChange={(e)=>setpassword(e.target.value)} required=""/>
-                            <button onClick={Login}>login</button>
-                    </form>
-                    
-         </div>
+        <div className="login-container">
+      <form className="login-form">
+        <h2>Login</h2>
+        <div className="input-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e)=> setEmail(e.target.value)}
+          />
         </div>
-        </td>
-        <td>
-        <div className="main">
-            <input type ="checkbox" id="chk1" aria-hidden="true"/>
-                <div className="signup">
-                    <form>
-                        <label for="chk1" aria-hidden="true">Student</label>
-                            <img src="student.jpg" alt="student"/>
-                    </form>
-                </div>
-                <div className="login">
-                
-                    <form>
-                    <label for="chk1" aria-hidden="true">Login</label>
-                    <input type ="regno" name="txt" placeholder="Regno" onChange={(e)=>setregno(e.target.value)} required=""/>
-                    <input type ="email" name="txt" placeholder="Email" onChange={(e)=>setgmail(e.target.value)}  required=""/>
-                            <input type ="password" name="txt" placeholder="Password" onChange={(e)=>setpassword(e.target.value)}  required=""/>
-                            <button  onClick={Login}>login</button>
-                    </form>
-                    
-         </div>
+        <div className="input-group">
+          <label htmlFor="regdno">regd no.</label>
+          <input
+            type="regdno"
+            id="regdno"
+            placeholder="Enter your regdno."
+            value={regno}
+            onChange={(e) => setregno(e.target.value)}
+          />
         </div>
-        </td>
-        <td>
-        <div className="main">
-            <input type ="checkbox" id="chk2" aria-hidden="true"/>
-                <div className="signup">
-                    <form>
-                        <label for="chk1" aria-hidden="true">Faculty</label>
-                            <img src="student.jpg" alt="student"/>
-                    </form>
-                </div>
-                <div className="login">
-                
-                    <form>
-                    <label for="chk2" aria-hidden="true">Login</label>
-                        
-                    <input type ="regno" name="txt" placeholder="Regno" onChange={(e)=>setregno(e.target.value)} required=""/>
-                    <input type ="email" name="txt" placeholder="Email"  onChange={(e)=>setgmail(e.target.value)} required=""/>
-                            <input type ="password" name="txt" placeholder="Password" onChange={(e)=>setpassword(e.target.value)} required=""/>
-                            <button  onClick={Save}>login</button>
-                    </form>
-                    
-         </div>
+        <div className="input-group">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
-        </td>
-       </tr>
-        </table>
-        
-    </>
+        <button type="button" onClick={Show}>
+          Login
+        </button>
+      </form>
+    </div>
+ </>
     )
+    }
 }

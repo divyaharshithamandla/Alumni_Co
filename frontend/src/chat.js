@@ -9,20 +9,20 @@ const Chat=()=>{
     var name="";
     const Send=async()=>{
         try{
-        // const res=await axios.get("http://localhost:6000/find/")
-        // if(res.data)
-        // {
-        //     // {
-        //     //     <Avatar name={res.data.Fname+" "+res.data.Lname} maxInitials={2}/>
-        //     // }
-        //     setuser(res.data.User);
-        const res1=await axios.post("http://localhost:6000/insert/"+text+"/"+"student"+"/"+"divyaharshitha7704@gmail.com")
+        const res=await axios.get("http://localhost:8000/find/")
+        if(res.data)
+        {
+            // {
+            //     <Avatar name={res.data.Fname+" "+res.data.Lname} maxInitials={2}/>
+            // }
+            setuser("Teja");
+        const res1=await axios.post("http://localhost:8000/insert/"+text+"/"+user)
         if(res1.data)
         {
             document.getElementById("text").value="";
             window.location.reload(false);
         }
-        }
+    }}
     catch(e)
     {
         console.log(e);
@@ -30,7 +30,7 @@ const Chat=()=>{
     }
     const[data,setData]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:6000/screen')
+        axios.get('http://localhost:8000/screen')
         .then((responce)=>{   
             setData(responce.data);
         })

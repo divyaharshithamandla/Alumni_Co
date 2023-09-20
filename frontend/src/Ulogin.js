@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
-import './login.css'
+import './login.css';
+import { Slideshows } from "./slider2";
 
 
 export const Ulogin=()=>
@@ -21,8 +22,9 @@ export const Ulogin=()=>
         {
              if(res.data)
              {
-                setgmail(res.data.email);
-                setpassword(res.data.password);
+                // setgmail(res.data.email);
+                // setpassword(res.data.password);
+                
                 
              }
              else{
@@ -39,6 +41,9 @@ export const Ulogin=()=>
     <table>
         <tr>
         <td>
+            <div>
+                <Slideshows/>
+            </div>
     <div className="main">
             <input type ="checkbox" id="chk" aria-hidden="true"/>
                 <div className="signup">
