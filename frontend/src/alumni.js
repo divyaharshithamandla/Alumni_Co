@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import axios from 'axios';
 // import './home1.css';
-const Dropdown = () => {
+import './mp.css';
+// import SearchBar from './searchbar';
+
+const Alumni = () => {
   const nav=useNavigate();
   
   const [selectedValue, setSelectedValue] = useState('');
-const [selectedOption, setSelectedOption] = useState([0]);
+
   
-const collegeOptions = [
+  const collegeOptions = [
     { label: 'Jntugv', value: 'c-123' },
     { label: 'Jntuk', value: 'c-456' },
     { label: 'Jntuh', value: 'c-789' },
@@ -19,18 +21,21 @@ const collegeOptions = [
     { label: 'GVP', value: 'n-172521' },
     
   ];
+
   
   const handleDropdownChange = (event) => {
     setSelectedValue(event.target.value);
-    const selectedLabel = collegeOptions.find(option => option.value === selectedValue).label;
-    setSelectedOption({ value: selectedValue, label: selectedLabel });
-    localStorage.value=selectedValue;
-    localStorage.label=selectedOption;
+    // nav('/')
   };
 
   return (
     <>
     <div class="center">
+        {/* <div>
+            
+            <SearchBar/>
+    </div> */}
+
       <h1>Select a college</h1>
       <select value={selectedValue} onChange={handleDropdownChange}>
         <option value="">Select a college to connect</option>
@@ -39,14 +44,14 @@ const collegeOptions = [
             {college.label}
           </option>
         ))}
+       
       </select>
-      {/* {selectedValue && <p>Selected value: {selectedValue} </p> } */}
-      {/* <p>Selected Value: {selectedOption.value}</p>
-      <p>Selected Label: {selectedOption.label}</p> */}
-
+     
     </div>
+   
+    
     </>
   );
 };
 
-export default Dropdown;
+export default Alumni;

@@ -2,52 +2,38 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
-import './login.css';
-import Dropdown from "./main";
+import './login.css'
 // import Dropdown from "./main";
 
 
 
 export const Login=()=>
-{  
-    const code=localStorage.code;
-    
+{  const code=localStorage.code;
     
     const nav=useNavigate();
     
     
-    
+    {
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
         const [regno, setregno] = useState("");
-        // let code=localStorage.code;
+      
         
     const Show=async()=>{
-        localStorage.Gmail=email;
-       try{
-        const res=await axios.get("http://localhost:8000/find2/"+code+"/"+email+"/"+regno+"/"+password)
+     
+        const res=await axios.get("http://localhost:8000/find/"+code+"/"+email+"/"+regno+"/"+password)
         {
              if(res.data)
              {
-                nav('/msn')
+                nav('/main')
              }
              else{
                 alert("not found");
              }
         }
     }
-    catch(e)
-    {
-        alert("fill the details properly");
-    }
-    }
     return(
     <>
-    <div className="ex">
-    <div className="ex1">
-        <Dropdown/>
-    </div>
-    <div className="ex2">
         <div className="login-container">
       <form className="login-form">
         <h2>Login</h2>
@@ -86,9 +72,7 @@ export const Login=()=>
         </button>
       </form>
     </div>
-    </div>
-    </div>
  </>
-  )
-
+    )
+    }
 }

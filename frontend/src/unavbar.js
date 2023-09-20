@@ -3,17 +3,17 @@ import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter, Routes } from 'react-router-dom';
 import { NavLink,useNavigate} from 'react-router-dom';
 import Sliders from "./slider";
-// import './home.css'
-//import Alumni from "./alumni";
+import './home.css'
+import Alumni from "./alumni";
 import { Home } from "./home";
 import { CgProfile } from "react-icons/cg";
-import { BiSearchAlt2 } from "react-icons/bi";
-import { BsFillChatLeftTextFill } from "react-icons/bs";
-export const Snav= () => {
+import { Ulogin } from "./ulogin";
+
+
+
+export const Unav= () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const Search=()=>{
-    // document.getElementById("search").style.display="";
-  }
+
   return (
     <body>
 
@@ -26,36 +26,25 @@ export const Snav= () => {
         <span></span>
       </div>
       <ul className={menuOpen ? "open" : ""}>
-      
         <li>
-          <NavLink to="/chat"><BsFillChatLeftTextFill/></NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-
-<NavLink onClick={Search}><BiSearchAlt2/></NavLink>
-
-</li>
+          <NavLink to="/profile">Students</NavLink>
+        </li>
         <li>
-        <NavLink to="/profile"><CgProfile/></NavLink>
+        <NavLink to="/notify">Notify</NavLink>
       
         </li>
-        {/* <li>
-          <NavLink to="/hire">Hire</NavLink>
-        </li> */}
         <li>
           <NavLink to="/slider">Events</NavLink>
         </li>
         <li>
-          <NavLink to="/">Logout</NavLink>
+          <NavLink to="/excel">Add Students</NavLink>
         </li>
-        {/* <li>
-          <NavLink to="/contact">Contact Us</NavLink>
-        </li> */}
       </ul>
     </nav>
-    <div>
-        {/* <Alumni/> */}
-    </div>
+    
     </body>
   );
 };

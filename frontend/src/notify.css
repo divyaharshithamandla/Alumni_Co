@@ -1,30 +1,47 @@
-button{
-    height:10%;
-    width:15%;
-    
-}
+/* notify.css */
 
-div{
-    
-    margin-left: 15%;
-    margin-right: 10%;
-}
-
-textarea {
-    width: 100%; /* Set the width to 100% of its container */
-    max-width: 400px; /* Limit the maximum width */
-    height: 150%; /* Set the initial height */
-    padding: 20%; /* Add padding inside the textarea */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 16px; /* Set the font size */
-    resize: vertical; /* Allow vertical resizing */
-    box-sizing: border-box; 
+/* Style the container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the container to full viewport height */
   }
   
-  /* Apply additional styles on focus */
-  textarea:focus {
-    border-color: #007bff; /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+  /* Style the textarea */
+  textarea {
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 10px;
   }
   
+  /* Style the button container */
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style the buttons */
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    background-color: lightcoral;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover 
+  {
+    background-color: #0056b3;
+  
+  }

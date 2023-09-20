@@ -58,22 +58,24 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import './slider.css';
 
+
+
 const slideImages = [
   {
-    url: 'al1.jpg',
+    url: 'hack1.jpg',
     // caption: 'Slide 1'
   },
   {
-    url: 'al2.jpg',
+    url: 'hack2.jpg',
     // caption: 'Slide 2'
   },
   {
-    url: 'al3.jpg',
+    url: 'hack3.jpg',
     // caption: 'Slide 3'
   },
 ];
 
-export const Slideshow = () => {
+export const Slideshows= () => {
   return (
     <div>
       <div className='body'>
@@ -81,13 +83,14 @@ export const Slideshow = () => {
           {slideImages.map((slideImage, index) => (
             <div key={index}>
               <div className="slide-container" style={{ backgroundImage: `url(${slideImage.url})` }}>
-                <span className="slide-caption">{slideImage.caption}</span>
+                {/* <span className="slide-caption">{slideImage.caption}</span> */}
               </div>
             </div>
           ))}
         </Slide>
-      
       </div>
+     <Slideshows/>
     </div>
+    
   )
   }

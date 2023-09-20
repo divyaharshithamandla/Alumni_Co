@@ -1,29 +1,30 @@
 import React, { useState ,useEffect } from "react";
 import axios from "axios";
 import Avatar from 'react-avatar';
+import './chat.css';
 const Chat=()=>{
     const[text,settext]=useState("");
     const[user,setuser]=useState("");
-    const gmail=localStorage.email;
+    // const gmail=localStorage.email;
     const value=localStorage.value;
     var name="";
     const Send=async()=>{
+        setuser("Teja");
         try{
-        const res=await axios.get("http://localhost:6000/find/"+gmail+"/"+value)
+        const res=await axios.get("http://localhost:8000/find/")
         if(res.data)
         {
             {
                 <Avatar name={res.data.Fname+" "+res.data.Lname} maxInitials={2}/>
             }
-            setuser(res.data.User);
-        const res1=await axios.post("http://localhost:6000/insert/"+name+"/"+text+"/"+user+"/"+gmail)
+            
+        const res1=await axios.post("http://localhost:8000/insert/"+text)
         if(res1.data)
         {
             document.getElementById("text").value="";
             window.location.reload(false);
         }
-        }
-    }
+    }}
     catch(e)
     {
         console.log(e);
@@ -31,7 +32,7 @@ const Chat=()=>{
     }
     const[data,setData]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:6000/screen')
+        axios.get('http://localhost:8000/screen')
         .then((responce)=>{   
             setData(responce.data);
         })
@@ -46,7 +47,7 @@ const Chat=()=>{
         <div className="screen">
         {
             data.map((item)=>{   
-                    if(item.Email==gmail)
+                    if(item.Email=="divyaharshitha7704@gmail.com")
                 {
                     return(
                         <>
@@ -71,8 +72,8 @@ const Chat=()=>{
             })
             }
         </div>
-        <div > <input type="text" id="text" onChange={(e)=>settext(e.target.value)}></input>
-        <button style={{borderRadius:"50px"}} onClick={Send}>send</button></div>
+       <div><center>  <input type="text" id="text" onChange={(e)=>settext(e.target.value)}></input>
+        <button style={{borderRadius:"50px"}} onClick={Send}>send</button></center></div>
         </div>
         </>
     );
