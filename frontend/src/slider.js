@@ -1,53 +1,96 @@
+<<<<<<< HEAD
+// import React from 'react';
+// import { Slide } from 'react-slideshow-image';
+// // import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'react-slideshow-image/dist/styles.css';
+// import './slider';
+// const spanStyle = {
+//   padding: '20px',
+
+// }
+
+// const Slider= {
+//     display: 'flex',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     backgroundSize: 'contain', /* Use 'contain' to fit the image within the div */
+//     backgroundRepeat: 'no-repeat',
+//     backgroundPosition: 'center center', /* Center the image horizontally and vertically */
+//     height: '100vh', 
+// /* Use 100vh to make the div take up the full viewport height */
+//     maxwidth: '100px',
+//   };
+  
+// const slideImages = [
+//   {
+//     url: 'al1.jpg',
+//     // caption: 'Slide 1'
+//   },
+//   {
+//     url: 'al2.jpg',
+//     // caption: 'Slide 2'
+//   },
+//   {
+//     url: 'al3.jpg',
+//     // caption: 'Slide 3'
+//   },
+// ];
+
+// export const Slideshow = () => {
+//     return (
+        
+//       <div>
+//         <div className='slider'>
+//         <Slide>
+//          {slideImages.map((slideImage, index)=> (
+//             <div key={index}>
+//               <div style={{ ...Slider, 'backgroundImage': `url(${slideImage.url})` }}>
+//                 <span style={spanStyle}>{slideImage.caption}</span>
+//               </div>
+//             </div>
+//           ))} 
+//         </Slide>
+//         </div>
+//       </div>
+//     )
+// }
+=======
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'; // Proper import for the CSS file
-import './slider.css'; // Make sure to specify the correct CSS file path
-
-const spanStyle = {
-  padding: '20px',
-  color: '#000000',
-};
-
-const divStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center center',
-  height: '100vh',
-  maxwidth: '600px', // Set the width to 600px
-};
+import 'react-slideshow-image/dist/styles.css';
+import './slider.css';
 
 const slideImages = [
   {
     url: 'al1.jpg',
-    caption: 'Slide 1',
+    // caption: 'Slide 1'
   },
   {
     url: 'al2.jpg',
-    caption: 'Slide 2',
+    // caption: 'Slide 2'
   },
   {
     url: 'al3.jpg',
-    caption: 'Slide 3',
+    // caption: 'Slide 3'
   },
 ];
 
 export const Slideshow = () => {
   return (
-    <div className="slide-container">
-      <div className='slide'>
-        <Slide images={slideImages.map((slideImage) => slideImage.url)}>
+    <div>
+      <div className='body'>
+        <Slide>
           {slideImages.map((slideImage, index) => (
             <div key={index}>
-              <div style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}>
-                <span style={spanStyle}>{slideImage.caption}</span>
+              <div className="slide-container" style={{ backgroundImage: `url(${slideImage.url})` }}>
+                <span className="slide-caption">{slideImage.caption}</span>
               </div>
             </div>
           ))}
         </Slide>
+      
       </div>
     </div>
-  );
-};
+  )
+  }

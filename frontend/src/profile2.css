@@ -1,0 +1,173 @@
+
+.user-profile-form {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+  }
+  
+ 
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .display-flux {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+  .i1 input[type="file"] {
+    flex: 3;
+  }
+  
+  
+  @media (max-width: 600px) 
+{
+    .user-profile-form
+     {
+      max-width: 100%;
+      padding: 10px;
+     }
+    } 
+    
+.user-profile-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:#eee;
+    box-shadow: 0px 0px 5px 0px #ccc;
+  }
+  
+  
+  .user-profile-form h1 {
+    text-align: center;
+    color: #eee;
+    margin-bottom: 20px;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="date"],
+  .form-group input[type="url"],
+  .form-group input[type="file"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  
+  
+  .form-group input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+ 
+  .url input[type="url"] {
+    margin-right: 10px;
+  }
+  
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .image label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+ 
+  @media (max-width: 600px) {
+    .user-profile-form {
+      max-width: 100%;
+    }
+  }
+  

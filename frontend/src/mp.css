@@ -1,0 +1,7 @@
+.center{
+    display: flex;
+    flex-direction: column; /* To align content vertically */
+    align-items: center; /* To center content horizontally */
+    justify-content: center; /* To center content vertically */
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}

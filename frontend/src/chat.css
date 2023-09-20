@@ -1,3 +1,87 @@
+<<<<<<< HEAD
+/* chat.css */
+
+/* Chat container styles */
+.screen {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    overflow-y: scroll;
+    height: 400px;
+  }
+  
+  /* Individual chat message styles */
+  h5 {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  
+  /* Align chat messages based on user */
+  h5[align="right"] {
+    text-align: right;
+    color: #007bff; /* Blue color for user's messages */
+  }
+  
+  h5[align="left"] {
+    text-align: left;
+    color: #333; /* Darker color for other users' messages */
+  }
+  
+  /* Input box and send button styles */
+  input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color:lightcoral;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Avatar styles */
+  /* You can customize the size and appearance of avatars as needed */
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  /* Message styles */
+  /* Add margin or padding to messages for better spacing */
+  .chat-message {
+    margin: 5px 0;
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 768px) {
+    input[type="text"] {
+      width: 60%;
+    }
+    button {
+      width: 30%;
+    }
+    .screen {
+      height: 300px;
+    }
+  }
+=======
 /* CSS */
 body, html {
     height: 100%;
@@ -49,8 +133,13 @@ body, html {
   .submit-button:hover {
     background-color: #0056b3;
   }
+<<<<<<< HEAD
   .screen{
     background-color: aqua;
     height:100px;
     width:500px;
   }
+=======
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
+  
+>>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84
