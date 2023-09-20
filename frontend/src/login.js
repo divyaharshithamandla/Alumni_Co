@@ -2,29 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
-<<<<<<< HEAD
-import './login.css'
-export const Login=()=>
-{  
-
-    const nav=useNavigate();
-    {
-        const [email, setEmail] = useState("");
-        const [password, setPassword] = useState("");
-        const [regno, setregno] = useState("");
-        const[college,setcollege]=useState("");
-        localStorage.college=college;
-    const Show=async()=>{
-      localStorage.Gmail=email;
-        const res=await axios.get("http://localhost:8000/find/"+email+"/"+regno+"/"+password)
-        {
-             if(res.data)
-             {
-              setcollege(res.data.College);
-                // nav('/main')
-                alert("success"); 
-            }
-=======
 import './login.css';
 import Dropdown from "./main";
 // import Dropdown from "./main";
@@ -54,17 +31,14 @@ export const Login=()=>
              {
                 nav('/msn')
              }
->>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84
+
              else{
                 alert("not found");
              }
         }
-<<<<<<< HEAD
+
     }
-    return(
-    <>
-=======
-    }
+    
     catch(e)
     {
         alert("fill the details properly");
@@ -74,10 +48,10 @@ export const Login=()=>
     <>
     <div className="ex">
     <div className="ex1">
-        <Dropdown/>
+        {/* <Dropdown/> */}
     </div>
     <div className="ex2">
->>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84
+
         <div className="login-container">
       <form className="login-form">
         <h2>Login</h2>
@@ -116,16 +90,14 @@ export const Login=()=>
         </button>
       </form>
     </div>
-<<<<<<< HEAD
- </>
-    )
-    }
-}
-=======
+
+
+    
+
     </div>
     </div>
  </>
   )
 
 }
->>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84
+
