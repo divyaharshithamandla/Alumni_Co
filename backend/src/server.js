@@ -15,15 +15,13 @@ app.get('/mail/:buttonId',async(req,res)=>{
 app.get('/mail1s',async(req,res)=>{
     const details=await db.collection("srkr").find({}).toArray()
     res.send(details);
-<<<<<<< HEAD
 });
 app.get('/find/:gmail',async(req,res)=>{
     const details=await db.collection("srkr").findOne({Gmail:req.params.gmail})
-=======
+    res.send(details);
 });    
 app.get('/find/:gmail/:value',async(req,res)=>{
     const details=await db.collection("srkr").findOne({Gmail:"divyaharshitha7704@gmail.com"})
->>>>>>> 76697754af5e530fba8b2b977878e224510f96df
     res.send(details);
 });
 app.post('/insert/:text/:"student"/:"divyaharshitha7704@gmail.com"',async(req,res)=>{
