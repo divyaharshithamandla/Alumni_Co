@@ -16,6 +16,10 @@
     "react-router-dom": "^6.16.0",
     "react-scripts": "^5.0.1",
     "react-slideshow-image": "^4.2.1",
+<<<<<<< HEAD
+=======
+    "styled-components": "^6.0.8",
+>>>>>>> abfbd9ac73732d982b32e9613df3e936f1608a81
     "web-vitals": "^2.1.4",
     "xlsx": "^0.18.5"
   },

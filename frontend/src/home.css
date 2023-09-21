@@ -1,6 +1,33 @@
-/* .active{
+<<<<<<< HEAD
+/* Set a background color for the homepage */
+body {
+    background-color: lightcyan; /* Replace with your desired background color */
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    padding: 0; /* Remove default padding to fill the entire viewport */
+    font-family: Arial, sans-serif; /* Set a font family for the text */
+  }
+  
+  /* Style your homepage content */
+  .container {
+    text-align: center;
+    padding: 100px; /* Add padding to center your content vertically and horizontally */
+    color: #fff; /* Set text color */
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+=======
+.active{
     background-color: #1d4ed8;
-} */
+}
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
 
 nav {
     display: flex;
@@ -37,6 +64,7 @@ nav ul li a {
     margin: 0 0.5rem;
     border-radius: 0.5rem;
 }
+
 
 nav ul li a:not(.active):hover {
     background-color:#172554 ;
@@ -92,7 +120,23 @@ nav .menu span {
     }
 }
 body{
-    /* background-image: url('C:\Users\Divya\OneDrive\Desktop\Alumni_Co\Alumni_Co\frontend\public\bc2.jpg') ; */
+<<<<<<< HEAD
+    /* background-image: url('C:\Users\rohin\OneDrive\Desktop\Hackathon-\frontend\public\bc2.jpg') ; */
+=======
+    background-image: url('C:\Users\Divya\OneDrive\Desktop\Alumni_Co\Alumni_Co\frontend\public\bc2.jpg') ;
+>>>>>>> 76697754af5e530fba8b2b977878e224510f96df
     background-repeat: no-repeat;
     background-size: cover;
+}
+.ex{
+    display: flex;
+    
+}
+.ex1{
+    
+    width: 500px;
+    margin-top: -20%;
+}
+.ex2{
+width: 500px;
 }

@@ -1,0 +1,8 @@
+/* Add this CSS to your stylesheet or component's CSS */
+.scrollable-list {
+    max-height: 200px; /* Set the desired maximum height */
+    overflow-y: auto;
+    border: 1px solid #ccc; /* Add a border for better visual separation */
+    padding: 8px; /* Optional padding for better styling */
+  }
+  

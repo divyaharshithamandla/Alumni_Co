@@ -1,4 +1,26 @@
 <<<<<<< HEAD
+import React from 'react';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'; // Proper import for the CSS file
+import './slider.css'; // Make sure to specify the correct CSS file path
+
+
+const spanStyle = {
+  padding: '20px',
+  color: '#000000',
+};
+
+const divStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center center',
+  height: '100vh',
+  maxwidth: '600px', // Set the width to 600px
+};
+=======
 // import React from 'react';
 // import { Slide } from 'react-slideshow-image';
 // // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -54,43 +76,73 @@
 //       </div>
 //     )
 // }
-=======
->>>>>>> 76697754af5e530fba8b2b977878e224510f96df
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import './slider.css';
 
+
+>>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84
+
 const slideImages = [
   {
-    url: 'al1.jpg',
+    url: 'hack1.jpg',
+<<<<<<< HEAD
+    // caption: 'Slide 1',
+  },
+  {
+    url: 'hack2.jpg',
+    // caption: 'Slide 2',
+  },
+  {
+    url: 'hack3.jpg',
+    // caption: 'Slide 3',
+=======
     // caption: 'Slide 1'
   },
   {
-    url: 'al2.jpg',
+    url: 'hack2.jpg',
     // caption: 'Slide 2'
   },
   {
-    url: 'al3.jpg',
+    url: 'hack3.jpg',
     // caption: 'Slide 3'
+>>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84
   },
 ];
 
-export const Slideshow = () => {
+export const Slideshows= () => {
   return (
+<<<<<<< HEAD
+    <div className="slide-container">
+      <div className='slide'>
+        <Slide images={slideImages.map((slideImage) => slideImage.url)}>
+          {slideImages.map((slideImage, index) => (
+            <div key={index}>
+              <div style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}>
+                <span style={spanStyle}>{slideImage.caption}</span>
+=======
     <div>
       <div className='body'>
         <Slide>
           {slideImages.map((slideImage, index) => (
             <div key={index}>
               <div className="slide-container" style={{ backgroundImage: `url(${slideImage.url})` }}>
-                <span className="slide-caption">{slideImage.caption}</span>
+                {/* <span className="slide-caption">{slideImage.caption}</span> */}
+>>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84
               </div>
             </div>
           ))}
         </Slide>
-      
       </div>
+<<<<<<< HEAD
     </div>
+  );
+};
+=======
+     <Slideshows/>
+    </div>
+    
   )
   }
+>>>>>>> 46481bbf2b60f8f1917d59c9bed851809dd5cc84

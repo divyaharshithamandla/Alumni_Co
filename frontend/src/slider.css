@@ -1,0 +1,31 @@
+/* Add these styles to your CSS file */
+.slider {
+  width: 40%; /* Adjust the width as needed */
+  float: left; /* Align to the left */
+  margin-right: 20px;
+   /* Add some spacing on the right side */
+   margin-left: 20px;
+}
+
+.slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center ;
+  height: 100vh;
+  
+}
+
+.slide {
+  max-width: 40%; 
+  /* Adjust the max-width to control image size */
+  
+}
+
+.slide-caption {
+  padding: 300px;
+}
+
+/* Remove the 'maxwidth' property from 'Slider' as it's not a valid CSS property */

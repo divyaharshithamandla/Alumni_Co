@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> abfbd9ac73732d982b32e9613df3e936f1608a81
 import { useState } from "react";
 import * as XLSX from "xlsx";
 import axios from 'axios';
@@ -16,7 +19,11 @@ function Excel() {
       const parsedData = XLSX.utils.sheet_to_json(sheet);
       setData(parsedData);
 
+<<<<<<< HEAD
       const res=axios.post("http://localhost:8000/insertData/"+parsedData)
+=======
+    //   const res=axios.post("http://localhost:8000/insertData/"+parsedData)
+>>>>>>> abfbd9ac73732d982b32e9613df3e936f1608a81
     };
   }
 
@@ -53,8 +60,16 @@ function Excel() {
       )}
 
       <br /><br />
+<<<<<<< HEAD
+=======
+    
+>>>>>>> abfbd9ac73732d982b32e9613df3e936f1608a81
     </div>
   );
 }
 
+<<<<<<< HEAD
 export default Excel;
+=======
+export default Excel;
+>>>>>>> abfbd9ac73732d982b32e9613df3e936f1608a81

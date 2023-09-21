@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* src/components/Profile.css */
 
 /* Center the form */
@@ -84,3 +85,106 @@
       padding: 10px;
     }
   }
+=======
+/* src/components/Profileview.css */
+.main-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+
+  }
+  
+  .one-part {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff; /* Updated background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    height: 320px;
+  }
+  
+  .two-part {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff; /* Updated background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    margin-left: 20px; /* Adjusted margin */
+  }
+  
+  .one-part img {
+    max-width: 100%;
+    border-radius: 50%; /* Made the border-radius circular */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .main-profile {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .one-part,
+    .two-part {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+  }
+  
+  .new {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .three-part img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Make the icons circular */
+  }
+  
+  .three-part {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff; /* Updated background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    margin-right: 20px; /* Adjusted margin */
+  }
+  
+  .fourth-part {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff; /* Updated background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+  }
+  
+  /* Add any additional styles or adjustments as needed */
+>>>>>>> abfbd9ac73732d982b32e9613df3e936f1608a81
