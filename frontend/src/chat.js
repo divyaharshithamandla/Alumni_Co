@@ -5,18 +5,18 @@ const Chat=()=>{
     const[text,settext]=useState("");
     const[user,setuser]=useState("");
     const gmail=localStorage.email;
-    const value=localStorage.value;
+    const code=localStorage.code;
     var name="";
     const Send=async()=>{
         try{
-        const res=await axios.get("http://localhost:6000/find/"+gmail+"/"+value)
+        const res=await axios.get("http://localhost:8000/find")
         if(res.data)
         {
             {
                 <Avatar name={res.data.Fname+" "+res.data.Lname} maxInitials={2}/>
             }
             setuser(res.data.User);
-        const res1=await axios.post("http://localhost:6000/insert/"+name+"/"+text+"/"+user+"/"+gmail)
+        const res1=await axios.post("http://localhost:8000/insert/"+name+"/"+text+"/"+user+"/"+gmail)
         if(res1.data)
         {
             document.getElementById("text").value="";

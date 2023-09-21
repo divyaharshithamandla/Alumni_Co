@@ -1,0 +1,86 @@
+/* src/components/Profile.css */
+
+/* Center the form */
+.user-profile-form {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Style form elements */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the profile image upload */
+  .display-flux {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+  .i1 input[type="file"] {
+    flex: 3;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 600px) {
+    .user-profile-form {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }

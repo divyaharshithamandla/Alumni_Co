@@ -16,8 +16,8 @@ app.get('/mail1s/:value',async(req,res)=>{
     const details=await db.collection(req.params.value).find({}).toArray()
     res.send(details);
 });
-app.get('/find/:gmail/:value',async(req,res)=>{
-    const details=await db.collection("srkr").findOne({Gmail:req.params.gmail})
+app.get('/find',async(req,res)=>{
+    const details=await db.collection("srkr").findOne({Gmail:"divya@gmail.com"})
     res.send(details);
 });
 app.post('/insert/:name/:text/:user/:gmail',async(req,res)=>{
@@ -29,7 +29,7 @@ app.get('/screen',async(req,res)=>{
     res.send(details);
 });
 connectToDB(()=>{
-    app.listen(6000,()=>{
-        console.log("Server Running At port 6000");
+    app.listen(8000,()=>{
+        console.log("Server Running At port 8000");
     })
 })
